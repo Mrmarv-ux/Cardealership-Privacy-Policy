@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink:        #111318;
+      --ink-mid:    #3C3F4A;
+      --ink-light:  #6B6F7C;
+      --ink-ghost:  #9FA3AF;
+      --rule:       #E4E6EC;
+      --surface:    #F8F9FB;
+      --white:      #FFFFFF;
+      --accent:     #1A1D26;
+      --accent-tint:#F0F1F5;
+      --line-hi:    #C9CBD6;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      background: var(--white);
+      border-bottom: 1px solid var(--rule);
+      padding: 0 56px;
+      height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .top-bar-label {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+    }
+
+    .top-bar-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .top-bar-badge {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      background: var(--accent-tint);
+      border: 1px solid var(--rule);
+      padding: 4px 12px;
+      border-radius: 100px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--accent);
+      padding: 80px 56px 72px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: 'PRIVACY';
+      position: absolute;
+      right: -10px;
+      bottom: -24px;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(100px, 14vw, 180px);
+      font-weight: 700;
+      color: rgba(255,255,255,0.03);
+      letter-spacing: -0.03em;
+      pointer-events: none;
+      line-height: 1;
+      user-select: none;
+    }
+
+    .hero-eyebrow {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.35);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.02em;
+      line-height: 1.08;
+      max-width: 520px;
+    }
+
+    .hero-divider {
+      width: 40px;
+      height: 2px;
+      background: rgba(255,255,255,0.2);
+      margin: 28px 0;
+    }
+
+    .hero-meta {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.3);
+      letter-spacing: 0.05em;
+    }
+
+    /* ── LAYOUT ── */
+    .page-wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 40px 100px;
+    }
+
+    /* ── INTRO ── */
+    .intro-band {
+      padding: 48px 0 40px;
+      border-bottom: 1px solid var(--rule);
+      margin-bottom: 48px;
+    }
+
+    .intro-band p {
+      font-size: 15px;
+      color: var(--ink-mid);
+      line-height: 1.85;
+      max-width: 680px;
+    }
+
+    /* ── TABLE OF CONTENTS ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 10px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+    }
+
+    .toc-label {
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+      margin-bottom: 18px;
+    }
+
+    .toc-list {
+      list-style: none;
+      columns: 2;
+      column-gap: 32px;
+    }
+
+    .toc-list li {
+      break-inside: avoid;
+    }
+
+    .toc-list a {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      padding: 6px 0;
+      text-decoration: none;
+      color: var(--ink-mid);
+      font-size: 13px;
+      font-weight: 400;
+      transition: color 0.15s ease;
+      border-bottom: 1px solid transparent;
+    }
+
+    .toc-list a:hover {
+      color: var(--ink);
+    }
+
+    .toc-num {
+      font-size: 10px;
+      font-weight: 600;
+      color: var(--ink-ghost);
+      letter-spacing: 0.05em;
+      min-width: 22px;
+    }
+
+    /* ── POLICY SECTIONS ── */
+    .policy-section {
+      padding: 40px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .policy-section:last-child {
+      border-bottom: none;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 22px;
+    }
+
+    .section-num {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      color: var(--ink-ghost);
+      text-transform: uppercase;
+      flex-shrink: 0;
+      padding-top: 3px;
+    }
+
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+
+    .policy-section p {
+      font-size: 14px;
+      color: var(--ink-mid);
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section h3 {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin: 24px 0 10px;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 16px;
+    }
+
+    .policy-section ul li {
+      font-size: 14px;
+      color: var(--ink-mid);
+      line-height: 1.8;
+      padding: 5px 0 5px 20px;
+      position: relative;
+    }
+
+    .policy-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--line-hi);
+    }
+
+    /* Contact block */
+    .contact-block {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 20px 24px;
+      margin-top: 18px;
+    }
+
+    .contact-block p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .contact-block strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .contact-block a {
+      color: var(--ink);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact-block a:hover {
+      color: var(--ink-mid);
+    }
+
+    /* Placeholder field */
+    .placeholder {
+      display: inline-block;
+      background: #FFF8E6;
+      border: 1px dashed #D4A017;
+      border-radius: 4px;
+      padding: 1px 8px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #8A6400;
+      letter-spacing: 0.04em;
+    }
+
+    /* Legal basis grid */
+    .legal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .legal-card {
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .legal-card-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      margin-bottom: 5px;
+    }
+
+    .legal-card p {
+      font-size: 12px !important;
+      color: var(--ink-light) !important;
+      line-height: 1.55 !important;
+      margin: 0 !important;
+    }
+
+    /* Rights grid */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .right-card {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--surface);
+      border: 1px solid var(--rule);
+      border-radius: 8px;
+      padding: 14px 16px;
+    }
+
+    .right-bullet {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--line-hi);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .right-text {
+      font-size: 13px !important;
+      color: var(--ink-mid) !important;
+      line-height: 1.55 !important;
+      margin: 0 !important;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--rule);
+      padding: 40px 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-left {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-ghost);
+    }
+
+    .footer-right {
+      font-size: 12px;
+      color: var(--ink-ghost);
+      text-align: right;
+    }
+
+    .footer-right a {
+      color: var(--ink-mid);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .top-bar { padding: 0 20px; }
+      .hero { padding: 56px 20px 52px; }
+      .page-wrap { padding: 0 20px 72px; }
+      .toc-list { columns: 1; }
+      .legal-grid, .rights-grid { grid-template-columns: 1fr; }
+      footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+      .footer-right { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <nav class="top-bar">
+    <span class="top-bar-label">Legal Document</span>
+    <div class="top-bar-right">
+      <span class="top-bar-badge">Privacy Policy</span>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="page-wrap" style="padding-top:0; padding-bottom:0;">
+      <div class="hero-eyebrow">Privacy &amp; Data Protection</div>
+      <h1 class="hero-title">Privacy Policy</h1>
+      <div class="hero-divider"></div>
+      <p class="hero-meta">Last Updated: <span class="placeholder">[Month Year]</span></p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="page-wrap">
+
+    <!-- Intro -->
+    <div class="intro-band">
+      <p><span class="placeholder">[Company Name]</span> respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your personal information when you engage with our services, visit our website, or communicate with us as a client, partner, or prospective customer.</p>
+    </div>
+
+    <!-- Table of Contents -->
+    <div class="toc">
+      <div class="toc-label">Contents</div>
+      <ul class="toc-list">
+        <li><a href="#s2"><span class="toc-num">02</span>Important Information</a></li>
+        <li><a href="#s3"><span class="toc-num">03</span>Contact Details</a></li>
+        <li><a href="#s4"><span class="toc-num">04</span>Data We Collect</a></li>
+        <li><a href="#s5"><span class="toc-num">05</span>How We Use Your Data</a></li>
+        <li><a href="#s6"><span class="toc-num">06</span>Legal Basis for Processing</a></li>
+        <li><a href="#s7"><span class="toc-num">07</span>Marketing Communications</a></li>
+        <li><a href="#s8"><span class="toc-num">08</span>Sharing Your Information</a></li>
+        <li><a href="#s9"><span class="toc-num">09</span>How We Store Your Information</a></li>
+        <li><a href="#s10"><span class="toc-num">10</span>Cookies</a></li>
+        <li><a href="#s11"><span class="toc-num">11</span>Your Rights</a></li>
+        <li><a href="#s12"><span class="toc-num">12</span>Third-Party Websites</a></li>
+        <li><a href="#s13"><span class="toc-num">13</span>Changes to This Policy</a></li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="policy-section" id="s2">
+      <div class="section-header">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Important Information</h2>
+      </div>
+      <p>This policy applies to all personal data processed by <span class="placeholder">[Company Name]</span> in the course of providing <span class="placeholder">[services description]</span> and related services. It covers:</p>
+      <ul>
+        <li>Data you provide when engaging our services or making enquiries</li>
+        <li>Data collected through our website and digital platforms</li>
+        <li>Data processed in connection with services we manage on your behalf</li>
+      </ul>
+      <p>Our website and services are intended for businesses and adults. We do not knowingly collect personal data from children.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="policy-section" id="s3">
+      <div class="section-header">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Contact Details</h2>
+      </div>
+      <p>If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:</p>
+      <div class="contact-block">
+        <p><strong>Company:</strong> <span class="placeholder">[Company Name]</span></p>
+        <p><strong>Location:</strong> <span class="placeholder">[City, State/Region, Country]</span></p>
+        <p><strong>Email:</strong> <a href="mailto:"><span class="placeholder">[hello@yourcompany.com]</span></a></p>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="policy-section" id="s4">
+      <div class="section-header">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Data We Collect</h2>
+      </div>
+
+      <h3>Information You Provide Directly</h3>
+      <p>When you contact us, request a proposal, or engage our services, we may collect:</p>
+      <ul>
+        <li>Full name and business name</li>
+        <li>Email address and phone number</li>
+        <li>Business address and billing information</li>
+        <li>Details about your goals, requirements, and business objectives</li>
+        <li>Any other information you choose to provide in your communications with us</li>
+      </ul>
+
+      <h3>Information We Collect Automatically</h3>
+      <p>When you visit our website, we may automatically collect certain technical data, including:</p>
+      <ul>
+        <li>IP address and device identifiers</li>
+        <li>Browser type and version</li>
+        <li>Pages visited and time spent on site</li>
+        <li>Referring URLs and navigation paths</li>
+        <li>Operating system information</li>
+      </ul>
+      <p>We may use third-party analytics tools (such as Google Analytics) to help us understand how visitors use our website. These tools collect usage data in accordance with their own privacy policies.</p>
+
+      <h3>Client and Campaign Data</h3>
+      <p>In delivering our services, we may process data you share with us about your customers or audiences for targeting, reporting, and optimisation purposes. You remain the data controller for such information; we act as a data processor on your behalf.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="policy-section" id="s5">
+      <div class="section-header">
+        <span class="section-num">05</span>
+        <h2 class="section-title">How We Use Your Data</h2>
+      </div>
+      <p>We use the personal data we collect for the following purposes:</p>
+      <ul>
+        <li>To respond to enquiries and provide proposals or quotations</li>
+        <li>To deliver our services and fulfil contractual obligations</li>
+        <li>To manage client relationships and maintain project records</li>
+        <li>To send service-related communications, invoices, and updates</li>
+        <li>To improve our website, services, and internal processes</li>
+        <li>To comply with legal and regulatory obligations</li>
+        <li>To send marketing communications about our services (where you have opted in or we have a legitimate interest)</li>
+      </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="policy-section" id="s6">
+      <div class="section-header">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Legal Basis for Processing</h2>
+      </div>
+      <p>We process your personal data on the following legal grounds:</p>
+      <div class="legal-grid">
+        <div class="legal-card">
+          <div class="legal-card-label">Contract</div>
+          <p>Where processing is necessary to deliver services you have engaged us for.</p>
+        </div>
+        <div class="legal-card">
+          <div class="legal-card-label">Legitimate Interests</div>
+          <p>For business development, improving services, and marketing our offerings.</p>
+        </div>
+        <div class="legal-card">
+          <div class="legal-card-label">Legal Obligation</div>
+          <p>Where we are required by law to process or retain data.</p>
+        </div>
+        <div class="legal-card">
+          <div class="legal-card-label">Consent</div>
+          <p>Where you have expressly agreed to receive marketing communications.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="policy-section" id="s7">
+      <div class="section-header">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Marketing Communications</h2>
+      </div>
+      <p>We may contact you about our services, industry insights, or relevant offers if you have engaged us or expressed interest in our work. You can opt out of marketing communications at any time by contacting us directly or using the unsubscribe option in any email we send. Opting out does not affect transactional communications relating to active engagements.</p>
+      <p>We will not share your personal data with third parties for their own marketing purposes without your express consent.</p>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="policy-section" id="s8">
+      <div class="section-header">
+        <span class="section-num">08</span>
+        <h2 class="section-title">Sharing Your Information</h2>
+      </div>
+      <p>We do not sell or rent your personal data. We may share your information in the following limited circumstances:</p>
+      <ul>
+        <li>With trusted service providers and subcontractors who assist us in delivering your engagement, under appropriate confidentiality terms</li>
+        <li>With professional advisers such as lawyers or accountants where necessary</li>
+        <li>Where required by law, regulation, or court order</li>
+        <li>To protect the rights, safety, or property of our company, clients, or the public</li>
+      </ul>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="policy-section" id="s9">
+      <div class="section-header">
+        <span class="section-num">09</span>
+        <h2 class="section-title">How We Store Your Information</h2>
+      </div>
+      <p>We take reasonable technical and organisational measures to protect your personal data against unauthorised access, loss, or misuse. Your data may be stored on secure cloud-based systems and project management platforms used in the delivery of our services.</p>
+      <p>We will retain your personal data for as long as necessary to fulfil the purposes described in this policy, or as required by applicable law. After termination of an engagement, we may retain records for a reasonable period for audit, legal, or business continuity purposes.</p>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="policy-section" id="s10">
+      <div class="section-header">
+        <span class="section-num">10</span>
+        <h2 class="section-title">Cookies</h2>
+      </div>
+      <p>Our website may use cookies to enhance your browsing experience and collect usage analytics. You can manage or disable cookies through your browser settings; however, doing so may affect the functionality of certain parts of our website.</p>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="policy-section" id="s11">
+      <div class="section-header">
+        <span class="section-num">11</span>
+        <h2 class="section-title">Your Rights</h2>
+      </div>
+      <p>You have the right to:</p>
+      <div class="rights-grid">
+        <div class="right-card">
+          <div class="right-bullet"></div>
+          <p class="right-text">Access the personal data we hold about you</p>
+        </div>
+        <div class="right-card">
+          <div class="right-bullet"></div>
+          <p class="right-text">Request correction of inaccurate or incomplete data</p>
+        </div>
+        <div class="right-card">
+          <div class="right-bullet"></div>
+          <p class="right-text">Request deletion of your personal data, subject to legal retention requirements</p>
+        </div>
+        <div class="right-card">
+          <div class="right-bullet"></div>
+          <p class="right-text">Object to or restrict certain types of processing</p>
+        </div>
+        <div class="right-card">
+          <div class="right-bullet"></div>
+          <p class="right-text">Withdraw consent at any time where processing is based on consent</p>
+        </div>
+      </div>
+      <p style="margin-top:20px;">To exercise any of these rights, please contact us at the details provided in Section 03. We will respond to your request within a reasonable timeframe.</p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="policy-section" id="s12">
+      <div class="section-header">
+        <span class="section-num">12</span>
+        <h2 class="section-title">Third-Party Websites</h2>
+      </div>
+      <p>Our website or communications may contain links to third-party websites or platforms. This Privacy Policy does not apply to those external sites. We encourage you to review the privacy policies of any third-party services you visit.</p>
+    </div>
+
+    <!-- Section 13 -->
+    <div class="policy-section" id="s13">
+      <div class="section-header">
+        <span class="section-num">13</span>
+        <h2 class="section-title">Changes to This Privacy Policy</h2>
+      </div>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. Any updates will be posted on our website with a revised effective date. Continued use of our services following any changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+  </div><!-- /page-wrap -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left"><span class="placeholder">[Company Name]</span></div>
+    <div class="footer-right">
+      <p>© <span class="placeholder">[Year]</span> <span class="placeholder">[Company Name]</span>. All rights reserved.</p>
+      <p style="margin-top:4px;"><a href="mailto:"><span class="placeholder">[hello@yourcompany.com]</span></a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

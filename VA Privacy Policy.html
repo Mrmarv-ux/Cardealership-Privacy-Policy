@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Verdant Advertising</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green: #1AC670;
+      --rich-black: #02191E;
+      --black: #000000;
+      --white: #FFFFFF;
+      --body-bg: #F7F8F6;
+      --text-primary: #0D1F14;
+      --text-secondary: #3A4A3E;
+      --text-muted: #6B7B70;
+      --border: #D6E4DA;
+      --section-divider: #E8F0EA;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background: var(--body-bg);
+      color: var(--text-primary);
+      font-size: 15px;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--rich-black);
+      padding: 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 80px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(26, 198, 112, 0.15);
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+    }
+
+    .header-logo-img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+
+    .footer-logo-img {
+      height: 28px;
+      width: auto;
+      display: block;
+      opacity: 0.85;
+    }
+
+    .header-motto {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--green);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    /* ── HERO BAND ── */
+    .page-hero {
+      background: var(--rich-black);
+      padding: 64px 48px 52px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      right: -60px;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(26,198,112,0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(26,198,112,0.4), transparent);
+    }
+
+    .hero-label {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--green);
+      border: 1px solid rgba(26,198,112,0.35);
+      padding: 5px 14px;
+      border-radius: 100px;
+      margin-bottom: 20px;
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+      max-width: 560px;
+    }
+
+    .hero-title span {
+      color: var(--green);
+    }
+
+    .hero-meta {
+      margin-top: 18px;
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      letter-spacing: 0.06em;
+      font-weight: 400;
+    }
+
+    /* ── LAYOUT ── */
+    .page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── INTRO CARD ── */
+    .intro-card {
+      background: var(--white);
+      border-left: 3px solid var(--green);
+      border-radius: 0 10px 10px 0;
+      padding: 24px 28px;
+      margin: 40px 0 48px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+
+    .intro-card p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+    }
+
+    /* ── SECTIONS ── */
+    .policy-section {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 36px 40px;
+      margin-bottom: 16px;
+      border: 1px solid var(--section-divider);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .policy-section:hover {
+      box-shadow: 0 4px 16px rgba(2, 25, 30, 0.06);
+    }
+
+    .section-number {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      margin-bottom: 18px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--section-divider);
+    }
+
+    .policy-section p {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    .policy-section p:last-child {
+      margin-bottom: 0;
+    }
+
+    .policy-section h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin: 22px 0 10px;
+    }
+
+    .policy-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 14px;
+    }
+
+    .policy-section ul li {
+      font-size: 14px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      padding: 5px 0 5px 20px;
+      position: relative;
+    }
+
+    .policy-section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--green);
+      opacity: 0.7;
+    }
+
+    /* Contact highlight */
+    .contact-block {
+      background: #F0FAF5;
+      border-radius: 8px;
+      padding: 18px 22px;
+      margin-top: 16px;
+      border: 1px solid rgba(26,198,112,0.2);
+    }
+
+    .contact-block p {
+      margin: 0;
+      font-size: 13px;
+    }
+
+    .contact-block strong {
+      color: var(--text-primary);
+      font-weight: 600;
+    }
+
+    .contact-block a {
+      color: var(--green);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-block a:hover {
+      text-decoration: underline;
+    }
+
+    /* Legal basis pills */
+    .legal-basis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .legal-pill {
+      background: #F7F8F6;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 12px 16px;
+    }
+
+    .legal-pill-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 4px;
+    }
+
+    .legal-pill-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.55;
+      margin: 0 !important;
+    }
+
+    /* Rights list */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 16px;
+    }
+
+    .right-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      background: #F7F8F6;
+      border-radius: 8px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+    }
+
+    .right-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--green);
+      flex-shrink: 0;
+      margin-top: 5px;
+    }
+
+    .right-text {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin: 0 !important;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--rich-black);
+      padding: 44px 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+      border-top: 1px solid rgba(26,198,112,0.12);
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-logo-svg {
+      width: 28px;
+      height: 19px;
+      opacity: 0.8;
+    }
+
+    .footer-brand {
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .footer-right {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      text-align: right;
+    }
+
+    .footer-right a {
+      color: rgba(26,198,112,0.7);
+      text-decoration: none;
+    }
+
+    .footer-right a:hover {
+      color: var(--green);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      header { padding: 0 20px; min-height: 68px; }
+      .header-motto { display: none; }
+      .page-hero { padding: 44px 20px 40px; }
+      .page-wrapper { padding: 0 16px 60px; }
+      .policy-section { padding: 24px 20px; }
+      footer { padding: 32px 20px; flex-direction: column; align-items: flex-start; }
+      .footer-right { text-align: left; }
+      .legal-basis-grid, .rights-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#" class="logo-area" aria-label="Verdant Advertising home">
+      <img src="https://drive.google.com/thumbnail?id=1-avP4ZbkAii46JpnqkzpLUghJo2emzkO&sz=w1000" alt="Verdant Advertising" class="header-logo-img" />
+    </a>
+    <span class="header-motto">Grow with Purpose</span>
+  </header>
+
+  <!-- HERO BAND -->
+  <div class="page-hero">
+    <div class="page-wrapper" style="padding-top:0; padding-bottom:0; max-width:860px; margin:0 auto;">
+      <div class="hero-label">Legal</div>
+      <h1 class="hero-title">Privacy <span>Policy</span></h1>
+      <p class="hero-meta">Last updated: June 2025</p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="page-wrapper">
+
+    <!-- Intro card -->
+    <div class="intro-card">
+      <p>Verdant Advertising respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, store, and protect your personal information when you engage with our services, visit our website, or communicate with us as a client, partner, or prospective customer.</p>
+    </div>
+
+    <!-- Section 2: Important Information -->
+    <div class="policy-section" id="s2">
+      <div class="section-number">Section 02</div>
+      <h2 class="section-title">Important Information</h2>
+      <p>This policy applies to all personal data processed by Verdant Advertising in the course of providing advertising, branding, campaign management, and related marketing services. It covers:</p>
+      <ul>
+        <li>Data you provide when engaging our services or making enquiries</li>
+        <li>Data collected through our website and digital platforms</li>
+        <li>Data processed in connection with advertising campaigns we manage on your behalf</li>
+      </ul>
+      <p>Our website and services are intended for businesses and adults. We do not knowingly collect personal data from children.</p>
+    </div>
+
+    <!-- Section 3: Contact Details -->
+    <div class="policy-section" id="s3">
+      <div class="section-number">Section 03</div>
+      <h2 class="section-title">Contact Details</h2>
+      <p>If you have any questions about this Privacy Policy or how we handle your personal data, please contact us:</p>
+      <div class="contact-block">
+        <p><strong>Company:</strong> Verdant Advertising</p>
+        <p><strong>Location:</strong> Port Harcourt, Rivers State, Nigeria</p>
+        <p><strong>Email:</strong> <a href="mailto:hello@verdantadvertising.com">hello@verdantadvertising.com</a></p>
+      </div>
+    </div>
+
+    <!-- Section 4: Data We Collect -->
+    <div class="policy-section" id="s4">
+      <div class="section-number">Section 04</div>
+      <h2 class="section-title">Data We Collect</h2>
+
+      <h3>Information You Provide Directly</h3>
+      <p>When you contact us, request a proposal, or engage our services, we may collect:</p>
+      <ul>
+        <li>Full name and business name</li>
+        <li>Email address and phone number</li>
+        <li>Business address and billing information</li>
+        <li>Details about your campaign goals, target audience, and business objectives</li>
+        <li>Any other information you choose to provide in your communications with us</li>
+      </ul>
+
+      <h3>Information We Collect Automatically</h3>
+      <p>When you visit our website, we may automatically collect certain technical data, including:</p>
+      <ul>
+        <li>IP address and device identifiers</li>
+        <li>Browser type and version</li>
+        <li>Pages visited and time spent on site</li>
+        <li>Referring URLs and navigation paths</li>
+        <li>Operating system information</li>
+      </ul>
+      <p>We may use third-party analytics tools (such as Google Analytics) to help us understand how visitors use our website. These tools collect usage data in accordance with their own privacy policies.</p>
+
+      <h3>Campaign and Client Data</h3>
+      <p>In delivering advertising and marketing services, we may process data you share with us about your customers or audiences for campaign targeting, reporting, and optimisation purposes. You remain the data controller for such information; we act as a data processor on your behalf.</p>
+    </div>
+
+    <!-- Section 5: How We Use Your Data -->
+    <div class="policy-section" id="s5">
+      <div class="section-number">Section 05</div>
+      <h2 class="section-title">How We Use Your Data</h2>
+      <p>We use the personal data we collect for the following purposes:</p>
+      <ul>
+        <li>To respond to enquiries and provide proposals or quotations</li>
+        <li>To deliver advertising, branding, and campaign management services</li>
+        <li>To manage our client relationships and maintain project records</li>
+        <li>To send service-related communications, invoices, and updates</li>
+        <li>To improve our website, services, and internal processes</li>
+        <li>To comply with legal and regulatory obligations</li>
+        <li>To send marketing communications about our services (where you have opted in or we have a legitimate interest)</li>
+      </ul>
+    </div>
+
+    <!-- Section 6: Legal Basis -->
+    <div class="policy-section" id="s6">
+      <div class="section-number">Section 06</div>
+      <h2 class="section-title">Legal Basis for Processing</h2>
+      <p>We process your personal data on the following legal grounds:</p>
+      <div class="legal-basis-grid">
+        <div class="legal-pill">
+          <div class="legal-pill-title">Contract</div>
+          <p class="legal-pill-desc">Where processing is necessary to deliver services you have engaged us for.</p>
+        </div>
+        <div class="legal-pill">
+          <div class="legal-pill-title">Legitimate Interests</div>
+          <p class="legal-pill-desc">For business development, improving services, and marketing our agency.</p>
+        </div>
+        <div class="legal-pill">
+          <div class="legal-pill-title">Legal Obligation</div>
+          <p class="legal-pill-desc">Where we are required by law to process or retain data.</p>
+        </div>
+        <div class="legal-pill">
+          <div class="legal-pill-title">Consent</div>
+          <p class="legal-pill-desc">Where you have expressly agreed to receive marketing communications.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section 7: Marketing -->
+    <div class="policy-section" id="s7">
+      <div class="section-number">Section 07</div>
+      <h2 class="section-title">Marketing Communications</h2>
+      <p>We may contact you about our services, industry insights, or relevant offers if you have engaged us or expressed interest in our work. You can opt out of marketing communications at any time by contacting us directly or using the unsubscribe option in any email we send. Opting out does not affect transactional communications relating to active engagements.</p>
+      <p>We will not share your personal data with third parties for their own marketing purposes without your express consent.</p>
+    </div>
+
+    <!-- Section 8: Sharing -->
+    <div class="policy-section" id="s8">
+      <div class="section-number">Section 08</div>
+      <h2 class="section-title">Sharing Your Information</h2>
+      <p>We do not sell or rent your personal data. We may share your information in the following limited circumstances:</p>
+      <ul>
+        <li>With trusted service providers and subcontractors who assist us in delivering your campaign (e.g., media vendors, print suppliers, platform partners), under appropriate confidentiality terms</li>
+        <li>With professional advisers such as lawyers or accountants where necessary</li>
+        <li>Where required by law, regulation, or court order</li>
+        <li>To protect the rights, safety, or property of Verdant Advertising, our clients, or the public</li>
+      </ul>
+    </div>
+
+    <!-- Section 9: Storage -->
+    <div class="policy-section" id="s9">
+      <div class="section-number">Section 09</div>
+      <h2 class="section-title">How We Store Your Information</h2>
+      <p>We take reasonable technical and organisational measures to protect your personal data against unauthorised access, loss, or misuse. Your data may be stored on secure cloud-based systems and project management platforms used in the delivery of our services.</p>
+      <p>We will retain your personal data for as long as necessary to fulfil the purposes described in this policy, or as required by applicable law. After termination of an engagement, we may retain records for a reasonable period for audit, legal, or business continuity purposes.</p>
+    </div>
+
+    <!-- Section 10: Cookies -->
+    <div class="policy-section" id="s10">
+      <div class="section-number">Section 10</div>
+      <h2 class="section-title">Cookies</h2>
+      <p>Our website may use cookies to enhance your browsing experience and collect usage analytics. You can manage or disable cookies through your browser settings; however, doing so may affect the functionality of certain parts of our website.</p>
+    </div>
+
+    <!-- Section 11: Your Rights -->
+    <div class="policy-section" id="s11">
+      <div class="section-number">Section 11</div>
+      <h2 class="section-title">Your Rights</h2>
+      <p>You have the right to:</p>
+      <div class="rights-grid">
+        <div class="right-item">
+          <div class="right-dot"></div>
+          <p class="right-text">Access the personal data we hold about you</p>
+        </div>
+        <div class="right-item">
+          <div class="right-dot"></div>
+          <p class="right-text">Request correction of inaccurate or incomplete data</p>
+        </div>
+        <div class="right-item">
+          <div class="right-dot"></div>
+          <p class="right-text">Request deletion of your personal data (subject to legal retention requirements)</p>
+        </div>
+        <div class="right-item">
+          <div class="right-dot"></div>
+          <p class="right-text">Object to or restrict certain types of processing</p>
+        </div>
+        <div class="right-item">
+          <div class="right-dot"></div>
+          <p class="right-text">Withdraw consent at any time where processing is based on consent</p>
+        </div>
+      </div>
+      <p style="margin-top:18px;">To exercise any of these rights, please contact us at the details provided in Section 3. We will respond to your request within a reasonable timeframe.</p>
+    </div>
+
+    <!-- Section 12: Third-Party Websites -->
+    <div class="policy-section" id="s12">
+      <div class="section-number">Section 12</div>
+      <h2 class="section-title">Third-Party Websites</h2>
+      <p>Our website or communications may contain links to third-party websites or platforms. This Privacy Policy does not apply to those external sites. We encourage you to review the privacy policies of any third-party services you visit.</p>
+    </div>
+
+    <!-- Section 13: Changes -->
+    <div class="policy-section" id="s13">
+      <div class="section-number">Section 13</div>
+      <h2 class="section-title">Changes to This Privacy Policy</h2>
+      <p>We may update this Privacy Policy from time to time to reflect changes in our practices or applicable law. Any updates will be posted on our website with a revised effective date. Continued use of our services following any changes constitutes acceptance of the updated policy.</p>
+    </div>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <img src="https://drive.google.com/thumbnail?id=1-avP4ZbkAii46JpnqkzpLUghJo2emzkO&sz=w1000" alt="Verdant Advertising" class="footer-logo-img" />
+    </div>
+    <div class="footer-right">
+      <p>© 2025 Verdant Advertising. All rights reserved.</p>
+      <p style="margin-top:4px;"><a href="mailto:hello@verdantadvertising.com">hello@verdantadvertising.com</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>
